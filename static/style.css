@@ -1,0 +1,45 @@
+a{
+    color: white;
+}
+h2 {
+    display: inline; /* o inline-block */
+    vertical-align: middle;
+    margin: 0; /* Aggiungi margin: 0; per rimuovere il margine predefinito */
+}
+body{
+    background-color: rgb(26, 25, 25);
+    overflow-x: hidden;
+}
+footer {
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.upbar_element{
+    color: beige;
+    text-decoration: none;
+    padding: 5%;
+
+}
+.upbar{
+    text-align: center;
+}
+.post {
+    margin-left: 3%;
+    margin-top: 6%;
+    width: calc(100vw - 6%); /* Larghezza del post considerando il margine sinistro */
+    display: flex; /* Utilizza flexbox per allineare immagine e testo sulla stessa riga */
+}
+
+.post img {
+    width: 25vw;
+    height: auto;
+}
+
+.post p {
+    color: white;
+    margin-left: 2%; /* Aggiungi un margine sinistro per separare il testo dall'immagine */
+}

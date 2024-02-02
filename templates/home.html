@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section id="home">
+        {% if posts %}
+            {% for post in posts %}
+              <!-- post tipo-->
+              <div class="post">
+                <a href="{{ url_for('post', post_id=post.id) }}"><img src="{{ url_for('static', filename='post_icons/' + post.icon) }}" alt=""></a>
+                <p>{{ post.title }}</p>
+                <p>{{ post.content }}</p>
+              </div>
+            {% endfor %}
+        {% else %}
+          <!-- post tipo-->
+          <div class="post">
+            <a href="/post/."><img src="https://th.bing.com/th/id/R.659bfacc3048148c71c1a2726375db18?rik=jBLt5H9v1bgf9Q&riu=http%3a%2f%2fwww.visionealchemica.com%2fwp-content%2fuploads%2f2013%2f01%2f75757.jpg&ehk=1k1mC%2b0g%2bap8Ufi6299QeWDJqX%2fLFq4La59NJ9qHitI%3d&risl=&pid=ImgRaw&r=0" alt=""></a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, esse? Facere maiores perspiciatis nemo porro veritatis, quibusdam necessitatibus. Ullam blanditiis error doloribus similique debitis quam hic officiis repudiandae quibusdam dolores.</p>
+          </div>
+        {% endif %}
+            
+    </section>
+{% endblock %}

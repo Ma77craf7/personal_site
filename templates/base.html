@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+<body>
+    <!-- upbar -->
+    <div class="upbar">
+        <h2 style="color: white;">MATTEO STRACUZZI</h2>
+        <a href="{{ url_for('notes') }}" class="upbar_element">School Notes 🇮🇹</a>
+        <a href="{{ url_for('cv') }}" class="upbar_element">CV</a>
+        <a href="{{ url_for('home') }}" class="upbar_element">Menu</a>
+        <a href="{{ url_for('github' )}}" class="upbar_element">Github</a>
+    </div>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        <p>Mattcraft was here.</p><p>Here is a random number for you: {{ random_number }}</p>
+    </footer>
+</body>
+</html>
